@@ -26,3 +26,35 @@ echo ${UseCase[@]}
 echo "dictionary Output is"
 echo ${UseCase[@]}
 echo ${!UseCase[@]}
+dictionary=${UseCase[@]}
+echo $dictionary
+
+echo "Array Output is "
+for ((i=2;i<=5;i++))
+do
+	array[$i]=${UseCase[$i]}
+	echo ${array[$i]}
+done
+
+# Sorting of Array
+for ((i=2;i<=5;i++))
+do
+	for((j=$i;j<=5;j++ ))
+	do
+		if [ ${array[$i]} -lt ${array[$j]} ]
+		then
+			temp_var=${array[i]}
+			array[$i]=${array[$j]}
+			array[$j]=$temp_var;
+		fi
+	done
+done
+
+# Printing the sorted number in Descending Order
+echo " In Descending Order result is :"
+
+for(( i=2;i<=5;i++ ))
+do
+	echo ${array[$i]}
+done
+
