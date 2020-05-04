@@ -14,11 +14,11 @@ echo $compute_usecase3
 echo $compute_usecase4
 echo $compute_usecase5
 
-declare -A UC
-UC[2]=$(($a + $b * $c))
-UC[3]=$(($a * $b + $c))
-UC[4]=$(($c + $a / $b))
-UC[5]=$(($a % $b + $c))
+declare -A UseCase
+UseCase[2]=$(($a + $b * $c))
+UseCase[3]=$(($a * $b + $c))
+UseCase[4]=$(($c + $a / $b))
+UseCase[5]=$(($a % $b + $c))
 
-echo "Usecases are" ${UC[@]}
+echo "Usecases are" ${UseCase[@]}
 
